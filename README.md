@@ -291,9 +291,9 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
-	go_terminal.SetSGR(go_terminal.Reset)
+    go_terminal.Clean()
+    go_terminal.CursorLineColumn(1, 1)
+    go_terminal.SetSGR(go_terminal.Reset)
 	
 	//A moves cursor up by n
     go_terminal.CursorUp(1)
@@ -338,7 +338,7 @@ func main() {
     go_terminal.CursorHide()
 	
 	// CursorShow shows the cursor.
-	go_terminal.CursorShow()
+    go_terminal.CursorShow()
 
 }
 
