@@ -294,22 +294,22 @@ func main() {
     go_terminal.Clean()
     go_terminal.CursorLineColumn(1, 1)
     go_terminal.SetSGR(go_terminal.Reset)
-	
-	//A moves cursor up by n
+    
+    //A moves cursor up by n
     go_terminal.CursorUp(1)
     
     //moves cursor down by n
     go_terminal.CursorDown(1)
-    	    
+            
     //moves cursor right by n
     go_terminal.CursorRight(1)
-    	    
+            
     //moves cursor left by n
     go_terminal.CursorLeft(1)
-    	    
+            
     //Save cursor position and attributes
     go_terminal.SaveCursorAttrs()
-    	    
+            
     //Restore cursor position and attributes
     go_terminal.RestoreCursorAttrs()
     
@@ -324,7 +324,7 @@ func main() {
     
     //moves cursor to column n
     go_terminal.CursorColumn(10)
-    	    
+            
     //Move cursor to screen location v,h
     go_terminal.CursorLineColumn(4, 1)
     
@@ -336,7 +336,7 @@ func main() {
     
     // CursorHide hide the cursor.
     go_terminal.CursorHide()
-	
+    
     // CursorShow shows the cursor.
     go_terminal.CursorShow()
 
