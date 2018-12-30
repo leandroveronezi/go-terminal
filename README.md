@@ -6,7 +6,7 @@
 
 ![](https://img.shields.io/github/release/leandroveronezi/go-terminal.svg)
 ![](https://img.shields.io/github/repo-size/leandroveronezi/go-terminal.svg)
-[![Go project version](https://badge.fury.io/go/github.com%2Fcrgimenes%2Fgoconfig.svg)](https://badge.fury.io/go/github.com%2Fcrgimenes%2Fgoconfig)
+[![GitHub version](https://badge.fury.io/gh/leandroveronezi%2Fgo-terminal.svg)](https://badge.fury.io/gh/leandroveronezi%2Fgo-terminal)
 
 
 ## Installing
