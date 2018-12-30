@@ -1,0 +1,6 @@
+{
+  "name": "GO-TERMINAL Gopher",
+  "version": "1.0.0.0",
+  "manifest_version": 2,
+  "description": "Go terminal color and cursor support"
+}
