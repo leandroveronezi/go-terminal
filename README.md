@@ -337,7 +337,7 @@ func main() {
     // CursorHide hide the cursor.
     go_terminal.CursorHide()
 	
-	// CursorShow shows the cursor.
+    // CursorShow shows the cursor.
     go_terminal.CursorShow()
 
 }
