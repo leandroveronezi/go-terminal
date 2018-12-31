@@ -335,10 +335,10 @@ func main() {
     //Move cursor to upper left corner
     goTerminal.CursorLeftHome()
     
-    // CursorHide hide the cursor.
+    //CursorHide hide the cursor.
     goTerminal.CursorHide()
     
-    // CursorShow shows the cursor.
+    //CursorShow shows the cursor.
     goTerminal.CursorShow()
 
 }

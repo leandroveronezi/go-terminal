@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// Set SGR (Select Graphic Rendition) parameters
 func SetSGR(Colors ...SGR) {
 
 	for _, Color := range Colors {

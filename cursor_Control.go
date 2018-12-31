@@ -8,67 +8,67 @@ import (
 	"strings"
 )
 
-//A moves cursor up by n
+// A moves cursor up by n
 func CursorUp(n int) {
 	fmt.Fprintf(Output, "%s[%dA", escape, n)
 }
 
-//moves cursor down by n
+// moves cursor down by n
 func CursorDown(n int) {
 	fmt.Fprintf(Output, "%s[%dB", escape, n)
 }
 
-//moves cursor right by n
+// moves cursor right by n
 func CursorRight(n int) {
 	fmt.Fprintf(Output, "%s[%dC", escape, n)
 }
 
-//moves cursor left by n
+// moves cursor left by n
 func CursorLeft(n int) {
 	fmt.Fprintf(Output, "%s[%dD", escape, n)
 }
 
-//Save cursor position and attributes
+// Save cursor position and attributes
 func SaveCursorAttrs() {
 	fmt.Fprintf(Output, "%s7", escape)
 }
 
-//Restore cursor position and attributes
+// Restore cursor position and attributes
 func RestoreCursorAttrs() {
 	fmt.Fprintf(Output, "%s8", escape)
 }
 
-//Save cursor position
+// Save cursor position
 func SaveCursor() {
 	fmt.Fprintf(Output, "%s[s", escape)
 }
 
-//Restore cursor position
+// Restore cursor position
 func RestoreCursor() {
 	fmt.Fprintf(Output, "%s[u", escape)
 }
 
-//Move to next line
+// Move to next line
 func CursorNextLine() {
 	fmt.Fprintf(Output, "%sE", escape)
 }
 
-//moves cursor to column n
+// moves cursor to column n
 func CursorColumn(n int) {
 	fmt.Fprintf(Output, "%s[%dG", escape, n)
 }
 
-//Move cursor to screen location v,h
+// Move cursor to screen location v,h
 func CursorLineColumn(Line, Column int) {
 	fmt.Fprintf(Output, "%s[%d;%dH", escape, Line, Column)
 }
 
-//Move cursor to upper left corner
+// Move cursor to upper left corner
 func CursorHome() {
 	fmt.Fprintf(Output, "%s[H", escape)
 }
 
-//Move cursor to upper left corner	hvhome
+// Move cursor to upper left corner	hvhome
 func CursorLeftHome() {
 	fmt.Fprintf(Output, "%s[f", escape)
 }
