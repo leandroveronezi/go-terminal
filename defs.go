@@ -11,6 +11,7 @@ type Attribute int
 
 const escape = "\x1b"
 
+//SGR (Select Graphic Rendition) parameters
 type SGR int
 
 const (
