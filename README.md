@@ -15,7 +15,7 @@ go get https://github.com/leandroveronezi/go-terminal
 
 ## Examples
 
-### SGR
+### SGR (Select Graphic Rendition)
 
 ```go
 package main
