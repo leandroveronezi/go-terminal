@@ -5,6 +5,8 @@
 ![MIT Licensed](https://img.shields.io/github/license/leandroveronezi/go-terminal.svg)
 ![](https://img.shields.io/github/repo-size/leandroveronezi/go-terminal.svg)
 
+Go terminal color and cursor support
+
 ## Installing
 
 ```bash
@@ -25,54 +27,54 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
+	goTerminal.Clean()
+	goTerminal.CursorLineColumn(1, 1)
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Bold)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Bold)
 	fmt.Println("Bold")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Faint)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Faint)
 	fmt.Println("Faint")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Italic)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Italic)
 	fmt.Println("Italic")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Underlined)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Underlined)
 	fmt.Println("Underlined")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BlinkSlow)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BlinkSlow)
 	fmt.Println("BlinkSlow")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Reverse)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Reverse)
 	fmt.Println("Reverse")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Invisible)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Invisible)
 	fmt.Println("Invisible")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Strike)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Strike)
 	fmt.Println("Strike")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Overline)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Overline)
 	fmt.Println("Overline")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Strike, go_terminal.Italic)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Strike, goTerminal.Italic)
 	fmt.Println("Strike + Italic")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Strike, go_terminal.Italic, go_terminal.Reverse)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Strike, goTerminal.Italic, goTerminal.Reverse)
 	fmt.Println("Strike + Italic + Reverse")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Bold, go_terminal.Italic)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Bold, goTerminal.Italic)
 	fmt.Println("Bold + Italic")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Italic, go_terminal.Underlined)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Italic, goTerminal.Underlined)
 	fmt.Println("Italic + Underlined")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Italic, go_terminal.Underlined, go_terminal.Reverse, go_terminal.BlinkSlow)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Italic, goTerminal.Underlined, goTerminal.Reverse, goTerminal.BlinkSlow)
 	fmt.Print("Italic + Underlined + Reverse + BlinkSlow")
 
-	go_terminal.SetSGR(go_terminal.Reset)
+	goTerminal.SetSGR(goTerminal.Reset)
 
-	pos, err := go_terminal.Size()
+	pos, err := goTerminal.Size()
 
 	if err == nil {
 		fmt.Println("")
@@ -82,10 +84,10 @@ func main() {
 		fmt.Println(err)
 	}
 
-	go_terminal.CursorNextLine()
+	goTerminal.CursorNextLine()
 
-	go_terminal.SetSGR(go_terminal.Reset)
-	go_terminal.SetSGR(go_terminal.BackgroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset)
+	goTerminal.SetSGR(goTerminal.BackgroundDefault)
 
 }
 ```
@@ -104,82 +106,82 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
+	goTerminal.Clean()
+	goTerminal.CursorLineColumn(1, 1)
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundDefault)
 	fmt.Println("Default")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundBlack)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundBlack)
 	fmt.Println("Black")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundRed)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundRed)
 	fmt.Println("Red")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundGreen)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundGreen)
 	fmt.Println("Green")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundYellow)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundYellow)
 	fmt.Println("Yellow")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundBlue)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundBlue)
 	fmt.Println("Blue")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundMagenta)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundMagenta)
 	fmt.Println("Magenta")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundCyan)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundCyan)
 	fmt.Println("Cyan")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundLightGray)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundLightGray)
 	fmt.Println("LightGray")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundDarkGray)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundDarkGray)
 	fmt.Println("DarkGray")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundLightRed)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundLightRed)
 	fmt.Println("LightRed")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundLightGreen)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundLightGreen)
 	fmt.Println("LightGreen")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundLightYellow)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundLightYellow)
 	fmt.Println("LightYellow")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundLightBlue)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundLightBlue)
 	fmt.Println("LightBlue")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundLightMagenta)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundLightMagenta)
 	fmt.Println("LightMagenta")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundLightCyan)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundLightCyan)
 	fmt.Println("LightCyan")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundWhite)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundWhite)
 	fmt.Println("White")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.ForegroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.ForegroundDefault)
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundDefault)
 	fmt.Println("Default")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundBlack)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundBlack)
 	fmt.Println("Black")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundRed)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundRed)
 	fmt.Println("Red")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundGreen)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundGreen)
 	fmt.Println("Green")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundYellow)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundYellow)
 	fmt.Println("Yellow")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundBlue)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundBlue)
 	fmt.Println("Blue")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundMagenta)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundMagenta)
 	fmt.Println("Magenta")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundCyan)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundCyan)
 	fmt.Println("Cyan")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundLightGray)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundLightGray)
 	fmt.Println("LightGray")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundDarkGray)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundDarkGray)
 	fmt.Println("DarkGray")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundLightRed)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundLightRed)
 	fmt.Println("LightRed")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundLightGreen)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundLightGreen)
 	fmt.Println("LightGreen")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundLightYellow)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundLightYellow)
 	fmt.Println("LightYellow")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundLightBlue)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundLightBlue)
 	fmt.Println("LightBlue")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundLightMagenta)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundLightMagenta)
 	fmt.Println("LightMagenta")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundLightCyan)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundLightCyan)
 	fmt.Println("LightCyan")
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundWhite)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundWhite)
 	fmt.Println("White")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BackgroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BackgroundDefault)
 
 }
 ```
@@ -198,25 +200,25 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
-	go_terminal.SetSGR(go_terminal.Reset)
+	goTerminal.Clean()
+	goTerminal.CursorLineColumn(1, 1)
+	goTerminal.SetSGR(goTerminal.Reset)
 
 	x := 1
 	y := 1
 
 	for i := 0; i < 256; i++ {
 
-		go_terminal.ColorRGBBackground(i, 0, 0)
-		go_terminal.CursorLineColumn(x, y)
+		goTerminal.ColorRGBBackground(i, 0, 0)
+		goTerminal.CursorLineColumn(x, y)
 		fmt.Print(" ")
 
-		go_terminal.ColorRGBBackground(0, i, 0)
-		go_terminal.CursorLineColumn(x, y+20)
+		goTerminal.ColorRGBBackground(0, i, 0)
+		goTerminal.CursorLineColumn(x, y+20)
 		fmt.Print(" ")
 
-		go_terminal.ColorRGBBackground(0, 0, i)
-		go_terminal.CursorLineColumn(x, y+40)
+		goTerminal.ColorRGBBackground(0, 0, i)
+		goTerminal.CursorLineColumn(x, y+40)
 		fmt.Print(" ")
 
 		y = y + 1
@@ -228,10 +230,10 @@ func main() {
 
 	}
 
-	go_terminal.CursorNextLine()
+	goTerminal.CursorNextLine()
 
-	go_terminal.SetSGR(go_terminal.Reset)
-	go_terminal.SetSGR(go_terminal.BackgroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset)
+	goTerminal.SetSGR(goTerminal.BackgroundDefault)
 
 }
 
@@ -251,27 +253,27 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
-	go_terminal.SetSGR(go_terminal.Reset)
+	goTerminal.Clean()
+	goTerminal.CursorLineColumn(1, 1)
+	goTerminal.SetSGR(goTerminal.Reset)
 
 	for i := 0; i <= 16; i++ {
 
 		for j := 0; j <= 16; j++ {
 
 			code := i*16 + j
-			go_terminal.Color256Background(code)
-			go_terminal.CursorLineColumn(i, j)
+			goTerminal.Color256Background(code)
+			goTerminal.CursorLineColumn(i, j)
 			fmt.Print(" ")
 
 		}
 
 	}
 
-	go_terminal.CursorNextLine()
+	goTerminal.CursorNextLine()
 
-	go_terminal.SetSGR(go_terminal.Reset)
-	go_terminal.SetSGR(go_terminal.BackgroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset)
+	goTerminal.SetSGR(goTerminal.BackgroundDefault)
 
 }
 ```
@@ -291,54 +293,54 @@ import (
 
 func main() {
 
-    go_terminal.Clean()
-    go_terminal.CursorLineColumn(1, 1)
-    go_terminal.SetSGR(go_terminal.Reset)
+    goTerminal.Clean()
+    goTerminal.CursorLineColumn(1, 1)
+    goTerminal.SetSGR(goTerminal.Reset)
     
     //A moves cursor up by n
-    go_terminal.CursorUp(1)
+    goTerminal.CursorUp(1)
     
     //moves cursor down by n
-    go_terminal.CursorDown(1)
+    goTerminal.CursorDown(1)
             
     //moves cursor right by n
-    go_terminal.CursorRight(1)
+    goTerminal.CursorRight(1)
             
     //moves cursor left by n
-    go_terminal.CursorLeft(1)
+    goTerminal.CursorLeft(1)
             
     //Save cursor position and attributes
-    go_terminal.SaveCursorAttrs()
+    goTerminal.SaveCursorAttrs()
             
     //Restore cursor position and attributes
-    go_terminal.RestoreCursorAttrs()
+    goTerminal.RestoreCursorAttrs()
     
     //Save cursor position
-    go_terminal.SaveCursor()
+    goTerminal.SaveCursor()
     
     //Restore cursor position
-    go_terminal.RestoreCursor()
+    goTerminal.RestoreCursor()
     
     //Move to next line
-    go_terminal.CursorNextLine()
+    goTerminal.CursorNextLine()
     
     //moves cursor to column n
-    go_terminal.CursorColumn(10)
+    goTerminal.CursorColumn(10)
             
     //Move cursor to screen location v,h
-    go_terminal.CursorLineColumn(4, 1)
+    goTerminal.CursorLineColumn(4, 1)
     
     //Move cursor to upper left corner
-    go_terminal.CursorHome()
+    goTerminal.CursorHome()
     
     //Move cursor to upper left corner
-    go_terminal.CursorLeftHome()
+    goTerminal.CursorLeftHome()
     
     // CursorHide hide the cursor.
-    go_terminal.CursorHide()
+    goTerminal.CursorHide()
     
     // CursorShow shows the cursor.
-    go_terminal.CursorShow()
+    goTerminal.CursorShow()
 
 }
 

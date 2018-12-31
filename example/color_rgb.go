@@ -7,25 +7,25 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
-	go_terminal.SetSGR(go_terminal.Reset)
+	goTerminal.Clean()
+	goTerminal.CursorLineColumn(1, 1)
+	goTerminal.SetSGR(goTerminal.Reset)
 
 	x := 1
 	y := 1
 
 	for i := 0; i < 256; i++ {
 
-		go_terminal.ColorRGBBackground(i, 0, 0)
-		go_terminal.CursorLineColumn(x, y)
+		goTerminal.ColorRGBBackground(i, 0, 0)
+		goTerminal.CursorLineColumn(x, y)
 		fmt.Print(" ")
 
-		go_terminal.ColorRGBBackground(0, i, 0)
-		go_terminal.CursorLineColumn(x, y+20)
+		goTerminal.ColorRGBBackground(0, i, 0)
+		goTerminal.CursorLineColumn(x, y+20)
 		fmt.Print(" ")
 
-		go_terminal.ColorRGBBackground(0, 0, i)
-		go_terminal.CursorLineColumn(x, y+40)
+		goTerminal.ColorRGBBackground(0, 0, i)
+		goTerminal.CursorLineColumn(x, y+40)
 		fmt.Print(" ")
 
 		y = y + 1
@@ -37,9 +37,9 @@ func main() {
 
 	}
 
-	go_terminal.CursorNextLine()
+	goTerminal.CursorNextLine()
 
-	go_terminal.SetSGR(go_terminal.Reset)
-	go_terminal.SetSGR(go_terminal.BackgroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset)
+	goTerminal.SetSGR(goTerminal.BackgroundDefault)
 
 }

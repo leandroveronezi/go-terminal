@@ -7,26 +7,26 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
-	go_terminal.SetSGR(go_terminal.Reset)
+	goTerminal.Clean()
+	goTerminal.CursorLineColumn(1, 1)
+	goTerminal.SetSGR(goTerminal.Reset)
 
 	for i := 0; i <= 16; i++ {
 
 		for j := 0; j <= 16; j++ {
 
 			code := i*16 + j
-			go_terminal.Color256Background(code)
-			go_terminal.CursorLineColumn(i, j)
+			goTerminal.Color256Background(code)
+			goTerminal.CursorLineColumn(i, j)
 			fmt.Print(" ")
 
 		}
 
 	}
 
-	go_terminal.CursorNextLine()
+	goTerminal.CursorNextLine()
 
-	go_terminal.SetSGR(go_terminal.Reset)
-	go_terminal.SetSGR(go_terminal.BackgroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset)
+	goTerminal.SetSGR(goTerminal.BackgroundDefault)
 
 }

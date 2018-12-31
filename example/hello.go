@@ -7,54 +7,54 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
+	goTerminal.Clean()
+	goTerminal.CursorLineColumn(1, 1)
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Bold)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Bold)
 	fmt.Println("Bold")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Faint)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Faint)
 	fmt.Println("Faint")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Italic)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Italic)
 	fmt.Println("Italic")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Underlined)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Underlined)
 	fmt.Println("Underlined")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.BlinkSlow)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.BlinkSlow)
 	fmt.Println("BlinkSlow")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Reverse)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Reverse)
 	fmt.Println("Reverse")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Invisible)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Invisible)
 	fmt.Println("Invisible")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Strike)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Strike)
 	fmt.Println("Strike")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Overline)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Overline)
 	fmt.Println("Overline")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Strike, go_terminal.Italic)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Strike, goTerminal.Italic)
 	fmt.Println("Strike + Italic")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Strike, go_terminal.Italic, go_terminal.Reverse)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Strike, goTerminal.Italic, goTerminal.Reverse)
 	fmt.Println("Strike + Italic + Reverse")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Bold, go_terminal.Italic)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Bold, goTerminal.Italic)
 	fmt.Println("Bold + Italic")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Italic, go_terminal.Underlined)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Italic, goTerminal.Underlined)
 	fmt.Println("Italic + Underlined")
 
-	go_terminal.SetSGR(go_terminal.Reset, go_terminal.Italic, go_terminal.Underlined, go_terminal.Reverse, go_terminal.BlinkSlow)
+	goTerminal.SetSGR(goTerminal.Reset, goTerminal.Italic, goTerminal.Underlined, goTerminal.Reverse, goTerminal.BlinkSlow)
 	fmt.Print("Italic + Underlined + Reverse + BlinkSlow")
 
-	go_terminal.SetSGR(go_terminal.Reset)
+	goTerminal.SetSGR(goTerminal.Reset)
 
-	pos, err := go_terminal.Size()
+	pos, err := goTerminal.Size()
 
 	if err == nil {
 		fmt.Println("")
@@ -64,9 +64,9 @@ func main() {
 		fmt.Println(err)
 	}
 
-	go_terminal.CursorNextLine()
+	goTerminal.CursorNextLine()
 
-	go_terminal.SetSGR(go_terminal.Reset)
-	go_terminal.SetSGR(go_terminal.BackgroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset)
+	goTerminal.SetSGR(goTerminal.BackgroundDefault)
 
 }

@@ -9,9 +9,9 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
-	go_terminal.SetSGR(go_terminal.Reset)
+	goTerminal.Clean()
+	goTerminal.CursorLineColumn(1, 1)
+	goTerminal.SetSGR(goTerminal.Reset)
 
 	fmt.Println("Loading...")
 
@@ -19,16 +19,16 @@ func main() {
 
 		time.Sleep(50 * time.Millisecond)
 
-		go_terminal.CursorColumn(1)
-		go_terminal.EraseLine()
+		goTerminal.CursorColumn(1)
+		goTerminal.EraseLine()
 
 		fmt.Print(strconv.Itoa(i) + "%")
 
 	}
 
-	go_terminal.CursorNextLine()
+	goTerminal.CursorNextLine()
 
-	go_terminal.SetSGR(go_terminal.Reset)
-	go_terminal.SetSGR(go_terminal.BackgroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset)
+	goTerminal.SetSGR(goTerminal.BackgroundDefault)
 
 }

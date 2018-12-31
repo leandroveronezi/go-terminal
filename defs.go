@@ -1,4 +1,4 @@
-package go_terminal
+package goTerminal
 
 import "os"
 

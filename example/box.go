@@ -7,21 +7,21 @@ import (
 
 func main() {
 
-	go_terminal.Clean()
-	go_terminal.CursorLineColumn(1, 1)
-	go_terminal.SetSGR(go_terminal.ForegroundBlue)
+	goTerminal.Clean()
+	goTerminal.CursorLineColumn(1, 1)
+	goTerminal.SetSGR(goTerminal.ForegroundBlue)
 
 	fmt.Println("╭───────────────╮")
 	fmt.Println("│               │")
 	fmt.Println("╰───────────────╯")
 
-	go_terminal.SetSGR(go_terminal.ForegroundGreen)
-	go_terminal.CursorLineColumn(2, 7)
+	goTerminal.SetSGR(goTerminal.ForegroundGreen)
+	goTerminal.CursorLineColumn(2, 7)
 	fmt.Println("TITLE")
 
-	go_terminal.CursorLineColumn(4, 1)
+	goTerminal.CursorLineColumn(4, 1)
 
-	go_terminal.SetSGR(go_terminal.ForegroundDefault)
-	go_terminal.SetSGR(go_terminal.Reset)
+	goTerminal.SetSGR(goTerminal.ForegroundDefault)
+	goTerminal.SetSGR(goTerminal.Reset)
 
 }
