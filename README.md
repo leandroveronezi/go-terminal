@@ -76,10 +76,9 @@ func main() {
 
 	pos, err := goTerminal.Size()
 
-	if err == nil {
-		fmt.Println("")
-		fmt.Println("x", pos.X)
-		fmt.Println("y", pos.Y)
+	if err == nil {		
+		fmt.Println("x:", pos.X)
+		fmt.Println("y:", pos.Y)
 	} else {
 		fmt.Println(err)
 	}
