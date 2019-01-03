@@ -5,7 +5,7 @@
 ![MIT Licensed](https://img.shields.io/github/license/leandroveronezi/go-terminal.svg)
 ![](https://img.shields.io/github/repo-size/leandroveronezi/go-terminal.svg)
 
-Go terminal color and cursor support
+A package that facilitates the creation of command line applications with custom colors and fonts and cursor manipulation
 
 ## Installing
 
