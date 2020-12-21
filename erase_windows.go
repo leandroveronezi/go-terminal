@@ -1,9 +1,19 @@
-// +build linux darwin
-
 package goTerminal
 
-import "fmt"
+/*
+#include <windows.h>
+#include <conio.h>
+#include <stdlib.h>
 
+void clean()
+{
+    system("cls");
+}
+
+*/
+import "C"
+
+/*
 // Erases from the current cursor position to the end of the current line.
 func EraseEndOfLine() {
 	fmt.Fprintf(Output, "%s[K", escape)
@@ -28,13 +38,15 @@ func ScreenEraseDown() {
 func ScreenEraseUp() {
 	fmt.Fprintf(Output, "%s[1J", escape)
 }
+*/
 
 // Erases the screen with the background colour and moves the cursor to home.
 func ScreenErase() {
-	fmt.Fprintf(Output, "%s[2J", escape)
+	C.clean()
+	CursorLineColumn(0, 0)
 }
 
 // Clean screen
 func Clean() {
-	fmt.Fprintf(Output, "%s[2J%s[;H", escape, escape)
+	C.clean()
 }
