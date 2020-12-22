@@ -2,6 +2,29 @@
 
 package goTerminal
 
+/*
+#include <windows.h>
+
+void hidecursor()
+{
+   HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+   CONSOLE_CURSOR_INFO info;
+   info.dwSize = 100;
+   info.bVisible = FALSE;
+   SetConsoleCursorInfo(consoleHandle, &info);
+}
+
+void showcursor()
+{
+   HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+   CONSOLE_CURSOR_INFO info;
+   info.dwSize = 100;
+   info.bVisible = TRUE;
+   SetConsoleCursorInfo(consoleHandle, &info);
+}
+
+*/
+import "C"
 import (
 	"fmt"
 	"syscall"
@@ -123,34 +146,15 @@ func CursorLeftHome() {
 // CursorShow shows the cursor.
 func CursorShow() {
 
-	var cursorInfo *CONSOLE_CURSOR_INFO
-
-	err := getConsoleCursorInfo(uintptr(syscall.Stdout), cursorInfo)
-
-	if err != nil {
-		return
-	}
-
-	cursorInfo.Visible = boolToBOOL(true)
-
-	setConsoleCursorInfo(uintptr(syscall.Stdout), cursorInfo)
+	C.showcursor()
 
 }
 
 // CursorHide hide the cursor.
 func CursorHide() {
 
-	var cursorInfo *CONSOLE_CURSOR_INFO
-	err := getConsoleCursorInfo(uintptr(syscall.Stdout), cursorInfo)
-
-	if err != nil {
-		return
-	}
-
-	cursorInfo.Visible = boolToBOOL(false)
-
-	setConsoleCursorInfo(uintptr(syscall.Stdout), cursorInfo)
-
+	C.hidecursor()
+	
 }
 
 // Size returns the height and width of the terminal.
