@@ -2,7 +2,10 @@
 
 package goTerminal
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 type Coord struct {
 	X int
