@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 package goTerminal
@@ -154,7 +155,7 @@ func CursorShow() {
 func CursorHide() {
 
 	C.hidecursor()
-	
+
 }
 
 // Size returns the height and width of the terminal.
