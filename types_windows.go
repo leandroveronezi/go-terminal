@@ -3,7 +3,6 @@
 
 package goTerminal
 
-import "C"
 import (
 	"syscall"
 )
