@@ -1,3 +1,3 @@
 module github.com/leandroveronezi/go-terminal
 
-go 1.17
+go 1.20
