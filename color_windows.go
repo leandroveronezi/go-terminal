@@ -1,9 +1,12 @@
+//go:build windows
 // +build windows
 
 package goTerminal
 
+import "os"
+
 func Color(Color int) {
 
-	setConsoleTextAttribute(stdout, uint16(Color))
+	setConsoleTextAttribute(os.Stdout.Fd(), uint16(Color))
 
 }
